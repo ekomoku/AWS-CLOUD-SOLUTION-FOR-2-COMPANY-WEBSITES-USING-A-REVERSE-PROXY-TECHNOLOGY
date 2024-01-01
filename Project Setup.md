@@ -40,3 +40,15 @@ AWS resources Required for the Design:
 ![Screenshot from 2023-12-29 11-19-20](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/6a941ab5-be39-45d1-847e-e883cee234bc)
 
 
+
+
+
+### SET UP A VIRTUAL PRIVATE NETWORK (VPC)
+
+
+
+Create VPC
+
+
+
+
