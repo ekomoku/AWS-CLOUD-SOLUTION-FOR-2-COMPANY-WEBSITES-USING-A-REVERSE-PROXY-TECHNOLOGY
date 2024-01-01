@@ -83,4 +83,132 @@ Create VPC
 
 
 
+
+
+
 Create subnets as shown in the architecture - 3 subnets in each Availability zones i.e 10.0.1.0/24, 10.0.3.0/24, 10.0.5.0/24 in us-east-1a
+
+
+
+
+![Screenshot from 2024-01-01 14-14-13](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/cc52125a-e610-47d1-9b22-bb48fdfc035b)
+
+
+
+
+
+
+![Screenshot from 2024-01-01 14-14-37](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/0ac7e86f-fe4b-4de0-9ce8-3e5a572bcc11)
+
+
+
+
+
+
+![Screenshot from 2024-01-01 14-21-56](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/259c42ac-6343-4385-9ff2-5edf93d4b244)
+
+
+
+
+
+
+
+Also, add 3 subnets in Availability zone us-east-1b i.e 10.0.2.0/24, 10.0.4.0/24, 10.0.6.0/24
+
+
+
+
+
+![Screenshot from 2024-01-01 14-29-33](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/172c3599-b092-4983-a310-6a36c0e9beae)
+
+
+
+
+
+
+
+
+
+
+
+N/B: These subnets are neither private nor public at this point. The Internet gateway and NAT gateway associated with any of them identifies them private or public.
+
+
+Create a route table and associate it with public subnets
+
+
+
+
+
+
+![Screenshot from 2024-01-01 14-50-58](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/e8d42877-8a0f-44dc-ae47-e691d8817d93)
+
+
+
+
+
+![Screenshot from 2024-01-01 14-52-00](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/1e53991a-78fd-4831-be0d-1189054c727f)
+
+
+
+
+Goto> Submit associations > Edit subnet associations ....to add the public subnets
+
+
+
+
+
+
+
+![Screenshot from 2024-01-01 14-54-20](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/d1f55047-2749-4577-84e1-f47c057f0f96)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+![Screenshot from 2024-01-01 14-55-39](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/fb2120e4-8ae3-4d4c-8645-189a4c12e948)
+
+
+
+
+
+
+Create a route table and associate it with private subnets
+
+
+
+
+
+![Screenshot from 2024-01-01 14-58-39](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/d0f4b728-6551-4249-ab32-9eae28446753)
+
+
+
+
+
+![Screenshot from 2024-01-01 15-00-07](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/a76866fb-51dc-459d-b48d-fdef75d7cba8)
+
+
+
+
+
+
+![Screenshot from 2024-01-01 15-04-14](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/3a3e58f4-b605-4eb4-b5ac-44a965e58118)
+
+
+
+
+
+
+Create an Internet Gateway for the public subnet
+
+
