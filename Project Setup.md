@@ -52,3 +52,35 @@ Create VPC
 
 
 
+
+
+![Screenshot from 2024-01-01 13-08-59](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/bc2f0cdb-e393-4fc4-ba88-0986e575bd68)
+
+
+
+
+![Screenshot from 2024-01-01 14-03-52](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/220d2ba0-1d27-4723-9902-70eae161c416)
+
+
+
+
+
+![Screenshot from 2024-01-01 14-04-25](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/2bfd6ff8-ba9d-4a29-bd51-502c7fc3a7e4)
+
+
+
+
+
+![Screenshot from 2024-01-01 14-06-23](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/486906b2-ee12-4b1b-888a-99584e572068)
+
+
+
+
+
+![Screenshot from 2024-01-01 14-07-31](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/45cdf909-16a1-4aa4-857f-f079a6103ff3)
+
+
+
+
+
+Create subnets as shown in the architecture - 3 subnets in each Availability zones i.e 10.0.1.0/24, 10.0.3.0/24, 10.0.5.0/24 in us-east-1a
