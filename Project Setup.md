@@ -217,3 +217,63 @@ Create an Internet Gateway for the public subnet
 
 
 ![Screenshot from 2024-01-03 08-40-58](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/66a07082-5a1e-455f-abdc-dd100065de9f)
+
+
+
+
+
+Attach the internet gateway to the VPC by clicking " Attach to a VPC" on the top right corner or under "Actions"
+
+
+
+
+
+![Screenshot from 2024-01-03 08-42-45](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/d281fd61-121e-4781-8841-82dd49292be2)
+
+
+
+
+
+
+![Screenshot from 2024-01-03 08-45-02](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/976e2d37-57ee-4722-aa0d-e249511459d4)
+
+
+
+
+
+![Screenshot from 2024-01-03 08-46-33](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/72ea5df7-7db1-4c46-8551-8f86501b825a)
+
+
+
+
+
+Edit a route in public route table and associate it with the Internet Gateway. This allows the public subnet to be accessible from the Internet)
+
+
+
+
+![Screenshot from 2024-01-03 08-50-26](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/3bb7c03a-de5b-47b9-8587-5ce19e1d211f)
+
+
+
+
+Click Edit Routes and click on Add Route, select Internet Gateway and pick the IGw previously created,click Save Changes
+
+
+
+
+![Screenshot from 2024-01-03 08-52-49](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/e3ded830-4500-4ace-bb2c-3b0bd5b524e0)
+
+
+
+
+
+![Screenshot from 2024-01-03 08-54-42](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/bb5ac256-4046-4752-ad6b-6743bfe864cd)
+
+
+
+
+Create 3 Elastic IPs - 1 Elastic IP will be used by the NAT gatewayw hile the remaining @ will be used by the Bastion host.
+
+
+
