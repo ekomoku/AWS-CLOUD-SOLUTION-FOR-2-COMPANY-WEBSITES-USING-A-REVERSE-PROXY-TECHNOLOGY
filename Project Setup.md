@@ -212,3 +212,8 @@ Create a route table and associate it with private subnets
 Create an Internet Gateway for the public subnet
 
 
+
+
+
+
+![Screenshot from 2024-01-03 08-40-58](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/66a07082-5a1e-455f-abdc-dd100065de9f)
