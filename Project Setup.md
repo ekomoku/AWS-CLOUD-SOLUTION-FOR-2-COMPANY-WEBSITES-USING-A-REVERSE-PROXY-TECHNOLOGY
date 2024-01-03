@@ -309,3 +309,55 @@ Create a NAT Gateway and assign one of the Elastic IPs. The NAT gateway is creat
 
 
 ![Screenshot from 2024-01-03 09-47-00](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/81eb7358-03db-461e-9044-9f78711d1cfd)
+
+
+
+
+
+Edit a route in private route table, and associate it with the NAT Gateway. This allows traffic to be sent to the internet but not from the internet.
+
+
+
+
+![Screenshot from 2024-01-03 10-20-37](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/a43b3fd0-cc31-4d86-98cf-8e5b630767c7)
+
+
+
+
+
+![Screenshot from 2024-01-03 10-22-17](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/152a05d4-040a-4d70-8aac-5113b929c515)
+
+
+
+
+
+![Screenshot from 2024-01-03 10-25-56](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/dbea1ba3-2d40-4713-a80a-b3341f6add1a)
+
+
+
+
+
+Create a Security Group for Application Load Balancer - Access to ALB will be allowed from the internet
+
+
+
+
+
+
+![Screenshot from 2024-01-03 10-33-38](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/8f35734f-59dc-4f49-8496-7ed824a52a1f)
+
+
+
+
+
+![Screenshot from 2024-01-03 10-35-21](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/72198532-6ce2-45a3-b76c-791f245710f3)
+
+
+
+
+
+Create security group for Bastion Servers - Access to the Bastion servers should be allowed only from workstations that need to SSH into the bastion servers. Hence, you can use your workstation public IP address.
+
+
+We can get this by opening the CMD in our local workstation(computer) and run the command ipconfig
+
