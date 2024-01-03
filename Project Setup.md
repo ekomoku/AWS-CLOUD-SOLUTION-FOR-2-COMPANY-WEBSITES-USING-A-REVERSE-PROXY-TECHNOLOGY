@@ -273,7 +273,39 @@ Click Edit Routes and click on Add Route, select Internet Gateway and pick the I
 
 
 
-Create 3 Elastic IPs - 1 Elastic IP will be used by the NAT gatewayw hile the remaining @ will be used by the Bastion host.
+Create 3 Elastic IPs - 1 Elastic IP will be used by the NAT gatewayw while the remaining 2 will be used by the Bastion host.
 
 
 
+
+
+![Screenshot from 2024-01-03 09-28-17](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/96da8edd-2cab-40ba-b679-04a33c81ef68)
+
+
+
+
+
+![Screenshot from 2024-01-03 09-31-59](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/fd2b8dfa-a88c-42a2-84cc-de442e9fa8bf)
+
+
+
+
+
+
+Create a NAT Gateway and assign one of the Elastic IPs. The NAT gateway is created in the public subnet
+
+
+
+
+![Screenshot from 2024-01-03 09-36-21](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/35244e0b-711c-4a13-b090-6448d4139cd3)
+
+
+
+
+![Screenshot from 2024-01-03 09-44-46](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/ade11b2b-c33a-4b49-9220-3bf228ade1e9)
+
+
+
+
+
+![Screenshot from 2024-01-03 09-47-00](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/81eb7358-03db-461e-9044-9f78711d1cfd)
