@@ -359,5 +359,42 @@ Create a Security Group for Application Load Balancer - Access to ALB will be al
 Create security group for Bastion Servers - Access to the Bastion servers should be allowed only from workstations that need to SSH into the bastion servers. Hence, you can use your workstation public IP address.
 
 
-We can get this by opening the CMD in our local workstation(computer) and run the command ipconfig
 
+We can get this by opening the CMD in our local workstation(computer) and run the command ipconfig ; or visit the link http://ipinfo.io/ip
+
+
+
+
+![Screenshot from 2024-01-03 14-36-17](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/a4c21e9f-4941-4b6a-9a80-ba77cb882923)
+
+
+
+
+
+
+![Screenshot from 2024-01-03 14-36-46](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/94aa41e6-1f4a-4e26-85e6-10f727638ed7)
+
+
+
+
+
+
+![Screenshot from 2024-01-03 14-38-41](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/45592ad1-8b1b-4df9-8612-d59adf859cae)
+
+
+
+
+Create security group from Application LB. Access will only be available from the Internet
+
+
+
+
+
+![Screenshot from 2024-01-03 14-43-06](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/cf4ad20b-3fcf-4748-8c59-fad375055564)
+
+
+
+
+
+
+Security Group for webservers - Access to Webservers should only be allowed from webserver ALB and bastion host.
