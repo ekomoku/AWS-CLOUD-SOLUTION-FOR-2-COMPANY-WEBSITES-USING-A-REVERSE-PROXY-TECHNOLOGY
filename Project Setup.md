@@ -337,6 +337,31 @@ Edit a route in private route table, and associate it with the NAT Gateway. This
 
 
 
+
+Create a Security Group for:
+
+
+Nginx Servers: Access to Nginx should only be allowed from a Application Load balancer (ALB). At this point, we have not created a load balancer, therefore we will update the rules later. For now, just create it and put some dummy records as a place holder.
+
+
+
+Bastion Servers: Access to the Bastion servers should be allowed only from workstations that need to SSH into the bastion servers. Hence, you can use your workstation public IP address. To get this information, simply go to your terminal and type curl www.canhazip.com
+
+
+
+Application Load Balancer: ALB will be available from the Internet Webservers: Access to Webservers should only be allowed from the Nginx servers. Since we do not have the servers created yet, just put some dummy records as a place holder, we will update it later.
+
+
+
+Data Layer: Access to the Data layer, which is comprised of Amazon Relational Database Service (RDS) and Amazon Elastic File System (EFS) must be carefully desinged – only webservers should be able to connect to RDS, while Nginx and Webservers will have access to EFS Mountpoint
+
+
+
+
+
+
+
+
 Create a Security Group for Application Load Balancer - Access to ALB will be allowed from the internet
 
 
@@ -398,3 +423,87 @@ Create security group from Application LB. Access will only be available from th
 
 
 Security Group for webservers - Access to Webservers should only be allowed from webserver ALB and bastion host.
+
+
+
+
+![Screenshot from 2024-01-04 09-11-32](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/0e4711c0-461f-4a72-ad87-9d1fc7011135)
+
+
+
+
+
+![Screenshot from 2024-01-04 09-17-40](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/c7dd5753-2509-4562-8be3-085ea337bf65)
+
+
+
+
+
+N/B: We can choose to allow ssh only from the Bastion host's IP. This will mean that if the Ec2 instance is compromised them the access is lost.
+
+
+This is not a good practice when applying auto scaling since it will scale out and scaling when needed and access to other Ec2 instances is denied to the bastion host.
+
+
+
+
+
+
+![Screenshot from 2024-01-04 16-31-58](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/033ebc2d-0893-4b09-b684-296462e75cf3)
+
+
+
+
+
+
+Create a Security Group for Nginx Servers - Access to Nginx should only be allowed from a Application Load balancer (ALB) and bastion host.
+
+
+
+
+![Screenshot from 2024-01-04 16-47-27](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/e4e4c0cc-fdb8-401b-a7a0-ab80da28027a)
+
+
+
+
+
+![Screenshot from 2024-01-04 16-49-38](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/3188c11a-9d2a-4cf2-a704-0730542cafab)
+
+
+
+
+Create security group for the internal ALB - allow access to only nginx reverse proxy.
+
+
+
+
+![Screenshot from 2024-01-04 16-52-48](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/fe2cdbec-c56f-4636-923b-18aaa8ea841c)
+
+
+
+
+![Screenshot from 2024-01-04 16-54-19](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/6d15d4d6-ebfd-4be8-a8a4-0d639048f4ba)
+
+
+
+
+Create security group for the backend services or datalayer to allow the websever access to the RDS and EFS in the backend security group. Allow access to the bastion host.
+
+
+
+
+![Screenshot from 2024-01-04 20-03-49](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/e663cb11-4af1-4b7b-8fe6-ac794bba249a)
+
+
+
+Add the webserver and bastion security groups
+
+
+
+![Screenshot from 2024-01-04 20-09-52](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/49df2c00-8179-4477-b248-bfcc00c38b60)
+
+
+
+
+
+Purchase a domain name and Create an ACM certificate
