@@ -683,4 +683,29 @@ Create the ALB forwarding traffic to the Nginx reverse proxy
 
 
 
-![Screenshot from 2024-01-04 22-41-10](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/5cb22ba0-63cb-42b4-bae8-66cf699c041a)
+![Screenshot from 2024-01-05 12-24-20](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/d94ac85e-3c6c-4348-ad62-048b4e71c99c)
+
+
+
+
+
+
+
+![Screenshot from 2024-01-05 12-15-03](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/34c3f90a-cbeb-48f8-bbf8-79ad90f2dffc)
+
+
+
+
+
+![Screenshot from 2024-01-05 12-15-51](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/9263775e-c12b-4d2f-ab5e-22f43fa00026)
+
+
+
+
+
+Remember to select a certificate from the dropdown
+
+
+
+![Screenshot from 2024-01-05 12-20-07](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/21ad6289-72bb-4e28-9d88-08cefeaf90f1)
+
