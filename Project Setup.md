@@ -506,4 +506,181 @@ Add the webserver and bastion security groups
 
 
 
+### Proceed With Compute Resources
+
+
+
+
+You will need to set up and configure compute resources inside your VPC. The recources related to compute are:
+
+    EC2 Instances
+    
+    Launch Templates
+    
+    Target Groups
+    
+    Autoscaling Groups
+    
+    TLS Certificates
+    
+    Application Load Balancers (ALB)
+
+
+### TLS Certificates From Amazon Certificate Manager (ACM)
+
+
+
+You will need TLS certificates to handle secured connectivity to your Application Load Balancers (ALB).
+
+    Navigate to AWS ACM
+    
+    Request a public wildcard certificate for the domain name you registered in Freenom
+    
+    Use DNS to validate the domain name
+    
+    Tag the resource
+    
+    Bind the ACM to the route53 hosted zone created earlier
+
+
+
+### Setup
+
+
+
 Purchase a domain name and Create an ACM certificate
+
+
+
+
+![Screenshot from 2024-01-04 20-57-15](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/59169534-047b-49e2-8ede-8005db7c046d)
+
+
+
+
+![Screenshot from 2024-01-04 20-58-18](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/8fafddc1-680c-4d37-aaaf-ca1c4d2923a1)
+
+
+
+
+Create record for both tooling and wordpress
+
+
+For tooling
+
+
+
+
+![Screenshot from 2024-01-04 22-13-37](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/dea5a508-c3ec-439d-a9e6-042c296acc58)
+
+
+
+
+![Screenshot from 2024-01-04 22-14-08](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/454924ef-f40a-4b01-9361-cf0dceaead2d)
+
+
+
+
+
+![Screenshot from 2024-01-04 22-20-54](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/5ae9ac5f-b547-4272-af9c-27830a5c5890)
+
+
+
+
+
+![Screenshot from 2024-01-04 22-22-21](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/080afa3f-b7f9-4ac8-864a-c67fa691d554)
+
+
+
+
+
+
+### Configuring Target Groups
+
+
+For Nginx Server
+
+    
+    Selecting Instances as the target type
+
+    
+    Ensuring the protocol HTTPS on secure TLS port 443
+
+    
+    Ensuring that the health check path is /healthstatus
+
+
+
+
+
+
+![Screenshot from 2024-01-05 09-54-37](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/880f3261-e5f4-4fe6-8c0a-317a58ca4c82)
+
+
+
+
+
+
+
+![Screenshot from 2024-01-05 09-56-02](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/6506fb8f-88b0-4674-a8fc-2fcd3e906eba)
+
+
+
+
+
+
+
+![Screenshot from 2024-01-05 09-59-58](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/4ed68fe7-e99e-4811-bb1f-4c1463acb647)
+
+
+
+
+
+For Wordpress
+
+    
+    Selecting Instances as the target type
+
+    
+    Ensuring the protocol HTTPS on secure TLS port 443
+
+    
+    Ensuring that the health check path is /healthstatus
+    
+
+For Tooling
+
+
+    Selecting Instances as the target type
+
+    
+    Ensuring the protocol HTTPS on secure TLS port 443
+
+    
+    Ensuring that the health check path is /healthstatus
+
+
+
+
+
+![Screenshot from 2024-01-05 10-19-35](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/054d3379-706c-4d80-a7eb-0021aac47d99)
+
+
+
+
+
+
+### Configuring Application Load Balancer (ALB)
+
+Create the ALB forwarding traffic to the Nginx reverse proxy
+
+
+
+
+![Screenshot from 2024-01-04 22-40-49](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/b2eaeb62-5998-4e5b-8287-41ae8a9da56d)
+
+
+
+
+
+![Screenshot from 2024-01-04 22-41-10](https://github.com/ekomoku/AWS-CLOUD-SOLUTION-FOR-2-COMPANY-WEBSITES-USING-A-REVERSE-PROXY-TECHNOLOGY/assets/66005935/5cb22ba0-63cb-42b4-bae8-66cf699c041a)
